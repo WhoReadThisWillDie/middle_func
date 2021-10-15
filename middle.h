@@ -5,8 +5,8 @@
 
 using namespace std;
 
-long long itc_abs(int num1);
-long long itc_pow(int num1, int num2);
+long long itc_abs(long long num1);
+long long itc_pow(long long num1, long long num2);
 void itc_num_print(int num1);
 int itc_len_num(long long num1);
 long long itc_sum_num(long long num1);

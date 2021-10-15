@@ -1,6 +1,6 @@
 #include "middle.h"
 
-long long itc_abs(int num1)
+long long itc_abs(long long num1)
 {
     if (num1 >= 0){
         return num1;
@@ -8,7 +8,7 @@ long long itc_abs(int num1)
     return -num1;
 }
 
-long long itc_pow(int num1, int num2)
+long long itc_pow(long long num1, long long num2)
 {
     int num3 = num1;
 
