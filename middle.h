@@ -5,15 +5,15 @@
 
 using namespace std;
 
-int itc_abs(int num1);
+long long itc_abs(int num1);
 long long itc_pow(int num1, int num2);
 void itc_num_print(int num1);
 int itc_len_num(long long num1);
-int itc_sum_num(long long num1);
+long long itc_sum_num(long long num1);
 long long itc_multi_num(long long num1);
 int itc_max_num(long long num1);
 int itc_min_num(long long num1);
-int itc_rev_num(long long num1);
+long long itc_rev_num(long long num1);
 int itc_null_count(long long num1);
 bool itc_mirror_num(long long num1);
 int itc_mirror_count(long long num1);

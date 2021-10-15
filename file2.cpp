@@ -14,11 +14,11 @@ int itc_min_num(long long num1)
     return res;
 }
 
-int itc_rev_num(long long num1)
+long long itc_rev_num(long long num1)
 {
     num1 = itc_abs(num1);
-    int res = 0;
-    int i = itc_len_num(num1) - 1;
+    long long res = 0;
+    long long i = itc_len_num(num1) - 1;
     while (num1 / 10 > 0) {
         res += (num1 % 10) * itc_pow(10, i);
         i--;

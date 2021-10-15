@@ -16,7 +16,7 @@ int itc_len_num(long long num1)
     return res;
 }
 
-int itc_sum_num(long long num1)
+long long itc_sum_num(long long num1)
 {
     int res = 0;
     num1 = itc_abs(num1);
