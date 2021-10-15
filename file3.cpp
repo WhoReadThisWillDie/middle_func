@@ -1,6 +1,6 @@
 #include "middle.h"
 
-int itc_second_max_num(long long num1)
+long long itc_second_max_num(long long num1)
 {
     int max1 = 0;
     int max2 = 0;
@@ -27,7 +27,7 @@ int itc_second_max_num(long long num1)
     return max2;
 }
 
-int itc_second_simple_max_num(long long num1)
+long long itc_second_simple_max_num(long long num1)
 {
     int max1 = itc_max_num(num1);
     int max2 = itc_second_max_num(num1);
