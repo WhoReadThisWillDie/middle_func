@@ -1,33 +1,32 @@
 #include "middle.h"
 
-long long itc_second_max_num(long long num1)
-{
-    int max1 = 0;
-    int max2 = 0;
-    num1 = itc_abs(num1);
-    if (num1 < 10)
+int itc_second_max_num(long long num1){
+    int max1 = 0, point, max2, len = 0;
+    if (num1 < 0)
+        num1 = itc_abs(num1);
+    if (num1 == 0)
         return -1;
-    max1 = num1 % 10;
-    num1 = num1 / 10;
-    while (num1 / 10 > 0) {
-        if (num1 % 10 > max2){
-            if (num1 % 10 > max1) {
-                max2 = max1;
-                max1 = num1 % 10;
-            } else
-                max2 = num1 % 10;
-        }
+    while (num1 > 0) {
+        point = num1 % 10;
         num1 = num1 / 10;
+        len++;
+        if (point >= max1){
+            max2 = max1;
+            max1 = point;
+        }
+        if (max2 < point && point < max1)
+            max2 = point;
     }
-    if (num1 % 10 > max1) {
-                max2 = max1;
-                max1 = num1 % 10;
-            } else
-                max2 = num1 % 10;
+    if(len == 1)
+        return -1;
+    if (max2 == 0)
+        return 0;
+    if (max2 == max1)
+        return max1;
     return max2;
 }
 
-long long itc_second_simple_max_num(long long num1)
+int itc_second_simple_max_num(long long num1)
 {
     int max1 = itc_max_num(num1);
     int max2 = itc_second_max_num(num1);
