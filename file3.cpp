@@ -17,7 +17,7 @@ int itc_second_max_num(long long num1){
         if (max2 < point && point < max1)
             max2 = point;
     }
-    if(len == 1)
+    if (len == 1)
         return -1;
     if (max2 == 0)
         return 0;
